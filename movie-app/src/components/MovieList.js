@@ -1,7 +1,10 @@
-import React from 'react';
-
 const MovieList = (props) => {
-    const FavoriteComponent = props.favoriteComponent;
+  const FavoriteComponent = props.favoriteComponent;
+
+  // Check if props.movies is null before mapping over it
+  if (!props.movies) {
+    return <div>Loading...</div>; // or display an error message
+  }
 
   return (
     <>
@@ -21,8 +24,3 @@ const MovieList = (props) => {
 };
 
 export default MovieList;
-
-
-
-
-
